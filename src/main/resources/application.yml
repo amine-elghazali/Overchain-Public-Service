@@ -34,9 +34,3 @@ security:
     - X-Xsrf-Token
     - Cache-Control
     - Id-Token
-  allowed-public-apis:
-    - /favicon.ico
-    - /session/login
-    - /public/**
-  exposed-headers:
-    - X-Xsrf-Token

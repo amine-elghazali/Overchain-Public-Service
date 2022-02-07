@@ -1,6 +1,5 @@
 package com.users.service.entity;
 
-import com.users.service.enums.SmartContractType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,20 +12,18 @@ import java.io.Serializable;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Contract implements Serializable{
+public class DeployedContract implements Serializable{
 
     private static final long serialVersionUID = 4408418647685225829L;
 
     @Id
     private String id;
-    private String userId;
-    private String propertyId;
-    private String contractAddress;
-    private String sellerWallet;
-    private Float price;
-    private Boolean isVerified;
-    private Boolean isDeployed;
-    private SmartContractType type;
-    private String[] whiteListWallets;
-    private String[] blackListWallets;
+    public String propertyCode;
+    public String contractAddress;
+    public String type;
+    public String sellerWallet;
+    public Float price;
+    public String title;
+    public String description;
+    public String propertyAddress;
 }

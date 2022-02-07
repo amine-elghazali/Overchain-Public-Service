@@ -1,24 +1,23 @@
 package com.users.service.services;
 
-import com.users.service.entity.Contract;
-import com.users.service.repository.ContractRepository;
+import com.users.service.entity.DeployedContract;
+import com.users.service.repository.DeployedContractRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.UUID;
 
 @Service
-public class ContractService {
+public class DeployedContractService {
 
     @Autowired
-    ContractRepository contractRepository;
+    DeployedContractRepository contractRepository;
 
-    public List<Contract> getContracts() {
+    public List<DeployedContract> getContracts() {
         return contractRepository.findAll();
     }
 
-    public Contract getContract(String contractID) {
+    public DeployedContract getContract(String contractID) {
         return contractRepository.findById(contractID).get();
     }
 

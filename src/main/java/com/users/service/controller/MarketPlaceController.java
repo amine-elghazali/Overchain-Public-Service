@@ -1,8 +1,8 @@
 package com.users.service.controller;
 
 
-import com.users.service.entity.Contract;
-import com.users.service.services.ContractService;
+import com.users.service.entity.DeployedContract;
+import com.users.service.services.DeployedContractService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,11 +16,11 @@ import java.util.List;
 public class MarketPlaceController {
 
     @Autowired
-    ContractService contractService;
+    DeployedContractService contractService;
 
     @GetMapping("properties")
-    public ResponseEntity<List<Contract>> getDeployedProperties(){
-        List<Contract> deployedContracts = this.contractService.getContracts();
+    public ResponseEntity<List<DeployedContract>> getDeployedProperties(){
+        List<DeployedContract> deployedContracts = this.contractService.getContracts();
         return ResponseEntity.ok(deployedContracts);
     }
 }
